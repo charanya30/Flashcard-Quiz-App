@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>Flashcard Quiz App</h1>
+        <p>Study with a question front and answer back. Add, edit, delete, and navigate cards.</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="flashcard-panel">
+        <div class="card" id="flashcard">
+          <div class="card-side card-front" id="card-front">
+            <strong>Question</strong>
+            <p id="question-text">Loading flashcards...</p>
+          </div>
+          <div class="card-side card-back hidden" id="card-back">
+            <strong>Answer</strong>
+            <p id="answer-text"></p>
+          </div>
+        </div>
+
+        <div class="card-controls">
+          <button id="prev-btn" type="button">Previous</button>
+          <button id="show-answer-btn" type="button">Show Answer</button>
+          <button id="next-btn" type="button">Next</button>
+        </div>
+
+        <div class="progress" id="progress"></div>
+      </section>
+
+      <section class="editor-panel">
+        <form id="flashcard-form">
+          <h2>Manage Flashcards</h2>
+          <label>
+            Question
+            <textarea id="question-input" rows="3" required placeholder="Enter the question"></textarea>
+          </label>
+          <label>
+            Answer
+            <textarea id="answer-input" rows="3" required placeholder="Enter the answer"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button id="save-btn" type="submit">Add Flashcard</button>
+            <button id="clear-btn" type="button" class="secondary">Clear</button>
+          </div>
+
+          <div class="delete-area hidden" id="delete-area">
+            <p>Editing a card? You can delete it here.</p>
+            <button id="delete-btn" type="button" class="danger">Delete Card</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
